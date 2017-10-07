@@ -1,0 +1,15 @@
+
+.gitignore
+.idea/codeStyleSettings.xml
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations/
+.idea/workspace.xml
+anglican-wny.iml
+bin/
+node_modules/
+public/images/
+public/bundle.js
