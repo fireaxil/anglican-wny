@@ -9,6 +9,5 @@
 .idea/runConfigurations/
 .idea/workspace.xml
 anglican-wny.iml
-bin/
 node_modules/
 public/bundle.js
