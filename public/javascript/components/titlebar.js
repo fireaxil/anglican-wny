@@ -28,7 +28,7 @@ class TitleBar extends React.Component {
         <AppBar>
           <ToolBar>
             <Typography type='title' className={classes.flex}>
-              Anglican Church of Buffalo
+              Church of Atonement
             </Typography>
             <Button color='contrast'> Home </Button>
             <Button color='contrast'> About Us </Button>

@@ -4,11 +4,14 @@ import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
+  pictureRoot: {
+    position: 'relative'
+  },
   picture: {
     width: '100%',
     minHeight: 400,
-    height: 0.6 * window.innerHeight,
-    backgroundImage: 'url(../../images/nickelcityrace.jpg)',
+    height: 0.7 * window.innerHeight,
+    backgroundImage: 'url(../../images/vigilfront.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   },
@@ -18,7 +21,17 @@ const styles = theme => ({
   },
   subheadingText: {
     color: 'white',
-    fontSize: 28
+    fontSize: 28,
+    zIndex: 100
+  },
+  overlay: {
+    position: 'absolute',
+    backgroundColor: 'rgba(32,26,22,.7)',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 99
   }
 })
 
@@ -30,12 +43,15 @@ class Pictures extends React.Component {
   render () {
     const classes = this.props.classes
     return (
-      <div className={classes.picture}>
-        <div className={classes.subheading}>
-          <Typography className={classes.subheadingText} color='inherit' type='title'>
-            At one with God, At one with each other.
-          </Typography>
+      <div className={classes.pictureRoot}>
+        <div className={classes.picture}>
+          <div className={classes.subheading}>
+            <Typography className={classes.subheadingText} color='inherit' type='title'>
+              At one with God, <br /> At one with each other.
+            </Typography>
+          </div>
         </div>
+        <div className={classes.overlay}></div>
       </div>
     )
   }
