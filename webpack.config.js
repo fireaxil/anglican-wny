@@ -21,13 +21,14 @@ module.exports = {
       }
     ]
   },
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/public/'
-  }
   // output: {
-  //   path: path.resolve(__dirname, 'public'),
-  //   filename: 'bundle.js'
+  //   path: path.join(__dirname, 'dist'),
+  //   filename: 'bundle.js',
+  //   publicPath: '/public/'
   // }
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    publicPath: '/public/',
+    filename: 'bundle.js'
+  }
 }
