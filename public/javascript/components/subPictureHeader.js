@@ -5,7 +5,11 @@ import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   root: {
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 20
+  },
+  text: {
+    fontWeight: 300
   }
 })
 
@@ -19,7 +23,7 @@ class SubPictureHeader extends React.Component {
 
     return (
       <div className={classes.root}>
-        <Typography type='display3'>
+        <Typography className={classes.text} type='display2'>
           We form churches that are both <br />
           evangelical and catholic <br />
           liturgical and missional <br />

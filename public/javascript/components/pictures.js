@@ -27,9 +27,7 @@ const styles = theme => ({
   },
   subheadingText: {
     color: 'white',
-    fontSize: '3em',
-    zIndex: 100
-    // marginBottom: '30%'
+    fontWeight: 100
   },
   overlay: {
     backgroundColor: 'rgba(32,26,22,.7)',
@@ -52,7 +50,7 @@ class Pictures extends React.Component {
         <div className={classes.picture}>
           <div className={classes.overlay}>
             <div className={classes.subheading}>
-              <Typography className={classes.subheadingText} color='inherit' type='title'>
+              <Typography className={classes.subheadingText} type='display2'>
                 At one with God. <br /> At one with each other.
               </Typography>
             </div>

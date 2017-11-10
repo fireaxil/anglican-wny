@@ -4,7 +4,7 @@ import Pictures from './pictures'
 import SubPictureHeader from './subPictureHeader'
 import blue from 'material-ui/colors/blue'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
-import 'typeface-roboto'
+// import 'typeface-roboto'
 
 // have to give an array of primary colors
 const theme = createMuiTheme({
