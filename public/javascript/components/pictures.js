@@ -23,7 +23,6 @@ const styles = theme => ({
   // },
   subheading: {
     height: '100%',
-    width: '100%',
     padding: '12% 5%'
   },
   subheadingText: {
