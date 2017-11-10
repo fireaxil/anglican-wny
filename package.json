@@ -7,7 +7,8 @@
     "start": "node ./bin/www",
     "test": "standard",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "heroku-postbuild": "webpack"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
