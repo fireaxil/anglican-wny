@@ -26,7 +26,14 @@
     "react-router": "^4.2.0",
     "redux": "^3.7.2",
     "serve-favicon": "~2.4.2",
-    "typeface-roboto": "0.0.35"
+    "typeface-roboto": "0.0.35",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "webpack": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
