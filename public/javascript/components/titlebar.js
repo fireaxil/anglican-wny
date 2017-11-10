@@ -25,15 +25,15 @@ class TitleBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar>
+        <AppBar color='default'>
           <ToolBar>
             <Typography type='title' className={classes.flex}>
               Church of Atonement
             </Typography>
-            <Button color='contrast'> Home </Button>
-            <Button color='contrast'> About Us </Button>
-            <Button color='contrast'> Nickel City Forum </Button>
-            <Button color='contrast'> Events </Button>
+            <Button color='accent'> Home </Button>
+            <Button color='accent'> About Us </Button>
+            <Button color='accent'> Nickel City Forum </Button>
+            <Button color='accent'> Events </Button>
           </ToolBar>
         </AppBar>
       </div>

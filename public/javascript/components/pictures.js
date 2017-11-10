@@ -5,33 +5,39 @@ import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   pictureRoot: {
-    position: 'relative'
+    textAlign: 'center'
   },
   picture: {
     width: '100%',
-    minHeight: 400,
-    height: 0.7 * window.innerHeight,
+    minHeight: '60vh',
     backgroundImage: 'url(../../images/vigilfront.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   },
+  // subheading: {
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   flexDirection: 'row',
+  //   alignItems: 'center',
+  //   height: '100%'
+  // },
   subheading: {
-    textAlign: 'center',
-    paddingTop: 30
+    height: '100%',
+    width: '100%',
+    padding: '12% 5%'
   },
   subheadingText: {
     color: 'white',
-    fontSize: 28,
+    fontSize: '3em',
     zIndex: 100
+    // marginBottom: '30%'
   },
   overlay: {
-    position: 'absolute',
     backgroundColor: 'rgba(32,26,22,.7)',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    zIndex: 99
+    minHeight: '60vh'
+    // padding: '12% 5%',
+    // height: 0.7 * window.innerHeight,
+    // width: '100%'
   }
 })
 
@@ -45,13 +51,14 @@ class Pictures extends React.Component {
     return (
       <div className={classes.pictureRoot}>
         <div className={classes.picture}>
-          <div className={classes.subheading}>
-            <Typography className={classes.subheadingText} color='inherit' type='title'>
-              At one with God, <br /> At one with each other.
-            </Typography>
+          <div className={classes.overlay}>
+            <div className={classes.subheading}>
+              <Typography className={classes.subheadingText} color='inherit' type='title'>
+                At one with God. <br /> At one with each other.
+              </Typography>
+            </div>
           </div>
         </div>
-        <div className={classes.overlay}></div>
       </div>
     )
   }

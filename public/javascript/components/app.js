@@ -1,25 +1,27 @@
 import React from 'react'
 import TitleBar from './titlebar'
 import Pictures from './pictures'
-import cyan from 'material-ui/colors/cyan'
-import teal from 'material-ui/colors/teal'
-import yellow from 'material-ui/colors/yellow'
+import SubPictureHeader from './subPictureHeader'
+import blue from 'material-ui/colors/blue'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import 'typeface-roboto'
 
 // have to give an array of primary colors
 const theme = createMuiTheme({
   palette: {
-    primary: teal,
-    secondary: yellow
+  //   primary: 'white',
+    secondary: blue
     // secondary: {
     //   ...yellow,
     //   A800: '#C62828'
     // }
   },
-  typography: {
-    title: {
-      color: 'white'
+  overrides: {
+    MuiAppBar: {
+      colorDefault: {
+        backgroundColor: 'white',
+        color: 'rgba(0, 0, 0, 0.87)'
+      }
     }
   }
 })
@@ -31,6 +33,7 @@ class App extends React.Component {
         <div>
           <TitleBar />
           <Pictures />
+          <SubPictureHeader />
         </div>
       </MuiThemeProvider>
     )
