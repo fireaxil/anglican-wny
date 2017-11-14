@@ -6,7 +6,7 @@ import Typography from 'material-ui/Typography'
 const styles = theme => ({
   root: {
     paddingTop: 40,
-    width: '70%',
+    width: 'calc(100% - 455px)',
     paddingRight: 20,
     paddingLeft: 20,
     marginLeft: 'auto',
