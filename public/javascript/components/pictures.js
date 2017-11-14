@@ -41,17 +41,30 @@ const styles = theme => ({
 class Pictures extends React.Component {
   constructor (props) {
     super(props)
+    this.getPictureStyle = this.getPictureStyle.bind(this)
+  }
+
+  getPictureStyle () {
+    const { backgroundImage } = this.props
+    return {
+      width: '100%',
+      minHeight: '60vh',
+      backgroundImage: backgroundImage,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }
   }
 
   render () {
-    const classes = this.props.classes
+    const { classes, titleText } = this.props
+    const pictureStyle = this.getPictureStyle()
     return (
       <div className={classes.pictureRoot}>
-        <div className={classes.picture}>
+        <div style={pictureStyle}>
           <div className={classes.overlay}>
             <div className={classes.subheading}>
               <Typography className={classes.subheadingText} type='display2'>
-                At one with God. <br /> At one with each other.
+                {titleText}
               </Typography>
             </div>
           </div>

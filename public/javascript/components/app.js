@@ -3,14 +3,17 @@ import TitleBar from './titlebar'
 import Pictures from './pictures'
 import SubPictureHeader from './subPictureHeader'
 import blue from 'material-ui/colors/blue'
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+import red from 'material-ui/colors/red'
+import { MuiThemeProvider, createMuiTheme, withStyles } from 'material-ui/styles'
+import PropTypes from 'prop-types'
+import AboutUs from './aboutUs'
 // import 'typeface-roboto'
 
 // have to give an array of primary colors
 const theme = createMuiTheme({
   palette: {
   //   primary: 'white',
-    secondary: blue
+    secondary: red
     // secondary: {
     //   ...yellow,
     //   A800: '#C62828'
@@ -22,22 +25,76 @@ const theme = createMuiTheme({
         backgroundColor: 'white',
         color: 'rgba(0, 0, 0, 0.87)'
       }
+    },
+    MuiButton: {
+      root: {
+        fontWeight: 300
+      }
+    },
+    MuiTab: {
+      root: {
+        fontWeight: 400
+      }
     }
   }
 })
 
+const styles = theme => ({
+  paddingBottom: {
+    paddingBottom: 100
+  }
+})
+
 class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentTab: 'home'
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange (event, currentTab) {
+    if (currentTab === 'home' || currentTab === 'about') {
+      this.setState({currentTab})
+    }
+  }
+
   render () {
+    const { classes } = this.props
+    const { currentTab } = this.state
+
     return (
       <MuiThemeProvider theme={theme}>
-        <div>
-          <TitleBar />
-          <Pictures />
-          <SubPictureHeader />
-        </div>
+        { currentTab === 'home' &&
+          <div className={classes.paddingBottom}>
+            <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
+            <Pictures
+              backgroundImage='url(../../images/vigilfront.png)'
+              titleText={<div> At one with God. <br /> At one with each other. </div>}
+            />
+            <SubPictureHeader />
+          </div>
+        }
+        {
+          currentTab === 'about' &&
+            <div className={classes.paddingBottom}>
+              <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
+              <Pictures
+                backgroundImage='url(../../images/aboutUs.png)'
+                titleText={'Who We Are'}
+              />
+              <AboutUs />
+            </div>
+        }
       </MuiThemeProvider>
     )
   }
 }
 
-export default App
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(App)
