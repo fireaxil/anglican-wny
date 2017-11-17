@@ -35,7 +35,6 @@ class TitleBar extends React.Component {
               <Tab color='accent' value='home' label='Home' />
               <Tab color='accent' value='about' label='About' />
               <Tab color='accent' value='nickel' label='Nickel City Forum' />
-              <Tab color='accent' value='events' label='Events' />
             </Tabs>
           </ToolBar>
         </AppBar>

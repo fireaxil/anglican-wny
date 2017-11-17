@@ -58,6 +58,8 @@ class App extends React.Component {
   handleChange (event, currentTab) {
     if (currentTab === 'home' || currentTab === 'about') {
       this.setState({currentTab})
+    } else if (currentTab === 'nickel') {
+      window.open('https://www.anglicanwny.com/nickel-city-forum/', '_blank')
     }
   }
 
@@ -67,9 +69,9 @@ class App extends React.Component {
 
     return (
       <MuiThemeProvider theme={theme}>
+        <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
         { currentTab === 'home' &&
           <div className={classes.paddingBottom}>
-            <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
             <Pictures
               backgroundImage='url(../../images/vigilfront.png)'
               titleText={<div> At one with God. <br /> At one with each other. </div>}
@@ -80,10 +82,9 @@ class App extends React.Component {
         {
           currentTab === 'about' &&
             <div className={classes.paddingBottom}>
-              <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
               <Pictures
                 backgroundImage='url(../../images/aboutUs.png)'
-                titleText={'Who We Are'}
+                titleText={'About Us'}
               />
               <AboutUs />
             </div>
