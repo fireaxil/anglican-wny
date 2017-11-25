@@ -47,7 +47,7 @@ class SubPictureHeader extends React.Component {
           </Typography>
           <br />
           <Typography className={classes.text} type='body2'>
-            Sundays at 4:30PM followed by a meal, starting December 3rd <br />
+            Sundays at 5:00PM followed by a meal, starting December 3rd <br />
             Location: 1 Symphony Circle
           </Typography>
           <Divider inset className={classes.divider} />

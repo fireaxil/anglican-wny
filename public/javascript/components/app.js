@@ -10,6 +10,12 @@ import AboutUs from './aboutUs'
 // import 'typeface-roboto'
 
 // have to give an array of primary colors
+
+// TODO nickel city tab with about nickel city forum and link to the nickel city website
+// contact us form info@attonementchurch.com
+// links to FB page
+// village church picture
+
 const theme = createMuiTheme({
   palette: {
   //   primary: 'white',

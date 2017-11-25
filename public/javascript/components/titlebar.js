@@ -16,7 +16,7 @@ const styles = theme => ({
     fontWeight: 300
   }
 })
-
+// make title bar larger across the titlebar
 class TitleBar extends React.Component {
   constructor (props) {
     super(props)
