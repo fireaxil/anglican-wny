@@ -7,6 +7,7 @@ import red from 'material-ui/colors/red'
 import { MuiThemeProvider, createMuiTheme, withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
 import AboutUs from './aboutUs'
+import BottomBar from './bottomBar'
 // import 'typeface-roboto'
 
 // have to give an array of primary colors
@@ -95,6 +96,7 @@ class App extends React.Component {
               <AboutUs />
             </div>
         }
+        <BottomBar onAboutClick={this.handleChange} />
       </MuiThemeProvider>
     )
   }

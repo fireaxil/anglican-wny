@@ -7,8 +7,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var nodemailer = require('nodemailer');
 var app = express();
+var aws = require('aws-sdk')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
@@ -24,6 +25,34 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+function sendEmail (req, res) {
+  let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: 'todo',
+      pass: 'todo'
+    }
+  })
+  let mailOptions = {
+    from: 'todo',
+    to: 'todo',
+    subject: 'hey',
+    text: 'plain body'
+  }
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error)
+    }
+    console.log('message sent')
+  })
+  res.send('Request to send email')
+}
+
+app.route('/api/sendEmail')
+  .post(sendEmail)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -36,7 +36,7 @@ class SubPictureHeader extends React.Component {
     return (
       <div className={classes.root}>
         <Typography className={classes.text} type='display1'>
-          We form churches that are both <br />
+          We form Anglican churches that are <i> both </i> <br />
           evangelical and catholic <br />
           liturgical and missional <br />
         </Typography>
