@@ -19,8 +19,14 @@ const styles = theme => ({
   text: {
     fontWeight: 300,
     lineHeight: '1.6em',
-    paddingLeft: '20%',
-    paddingRight: '20%'
+    paddingLeft: 24,
+    paddingRight: 24
+  },
+  '@media (min-width: 948px)': {
+    text: {
+      paddingLeft: '20%',
+      paddingRight: '20%'
+    }
   },
   divider: {
     marginTop: 30,
@@ -39,6 +45,7 @@ const styles = theme => ({
 class AboutUs extends React.Component {
   render () {
     const { classes } = this.props
+    // const textClassName = classes.text + ' ' + classes.textMobile
     return (
       <div className={classes.root}>
         <Typography className={classes.centerText} type='display2'>
