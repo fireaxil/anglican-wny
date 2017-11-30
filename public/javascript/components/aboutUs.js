@@ -22,13 +22,13 @@ const styles = theme => ({
     paddingLeft: 24,
     paddingRight: 24
   },
+  // '@media (min-resolution: 200dpi)': {
+  //   text: {
+  //     paddingLeft: '20%',
+  //     paddingRight: '20%'
+  //   }
+  // },
   '@media (min-width: 948px)': {
-    text: {
-      paddingLeft: '20%',
-      paddingRight: '20%'
-    }
-  },
-  '@media (min-width: 600px)': {
     text: {
       paddingLeft: '20%',
       paddingRight: '20%'
