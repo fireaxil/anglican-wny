@@ -7,7 +7,10 @@ import Divider from 'material-ui/Divider'
 const styles = theme => ({
   root: {
     paddingTop: 40,
-    width: 'calc(100% - 455px)',
+    // width: 'calc(100% - 455px)',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     paddingRight: 20,
     paddingLeft: 20,
     marginLeft: 'auto',
@@ -15,11 +18,13 @@ const styles = theme => ({
   },
   text: {
     fontWeight: 300,
-    lineHeight: '1.6em'
+    lineHeight: '1.6em',
+    paddingLeft: '20%',
+    paddingRight: '20%'
   },
   divider: {
     marginTop: 30,
-    width: '85%'
+    width: '68%'
   },
   dividerMargin: {
     marginTop: 30
@@ -45,7 +50,7 @@ class AboutUs extends React.Component {
           When a seed falls into the ground, it dies in a sense, but then it sprouts to a totally new life. When Jesus renews our minds, he begins a new (and sometimes hard) process of planting a whole new garden in the world. We are here to support each other as God works in us, and to taste the good fruit of the kingdom of God as he grows it in our lives, neighborhoods, and families.
           The particular way we do this comes from a pattern called the Anglican tradition.
         </Typography>
-        <Divider inset className={classes.divider} />
+        <Divider className={classes.divider} />
         <div className={classes.dividerMargin}>
           <Typography className={classes.centerText} type='display2'>
             What We Seek
