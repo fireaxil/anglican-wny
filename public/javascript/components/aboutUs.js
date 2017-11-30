@@ -27,11 +27,11 @@ const styles = theme => ({
     width: '68%'
   },
   dividerMargin: {
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 30
   },
   centerText: {
     fontWeight: 300,
-    textAlign: 'center',
     lineHeight: '1.6em'
   }
 })
@@ -50,17 +50,16 @@ class AboutUs extends React.Component {
           When a seed falls into the ground, it dies in a sense, but then it sprouts to a totally new life. When Jesus renews our minds, he begins a new (and sometimes hard) process of planting a whole new garden in the world. We are here to support each other as God works in us, and to taste the good fruit of the kingdom of God as he grows it in our lives, neighborhoods, and families.
           The particular way we do this comes from a pattern called the Anglican tradition.
         </Typography>
-        <Divider className={classes.divider} />
-        <div className={classes.dividerMargin}>
-          <Typography className={classes.centerText} type='display2'>
-            What We Seek
-          </Typography>
-          <br />
-          <Typography className={classes.text} type='body1'>
-            We are building a community around Jesus Christ. We are nourished by his Spirit and the sacraments of his church. His purposes to transform the world have become our purposes, his wounds have become the source of our healing, and his kingdom is turning our world upside down.
-            Our roots extend, on the one side, through the sacraments, the liturgy, and the accumulated wisdom of God's people. On the other side, our roots also reach out through the heartfelt sense of mission and personal renewal that have energized many through God's Spirit. With such a healthy foundation, this is one strong plant.
-          </Typography>
+        <div style={{width: '100%', display: 'flex', justifyContent:'center'}}>
+          <Divider className={classes.divider} />
         </div>
+        <Typography className={classes.centerText} type='display2'>
+          What We Seek
+        </Typography>
+        <Typography className={classes.text} type='body1'>
+          We are building a community around Jesus Christ. We are nourished by his Spirit and the sacraments of his church. His purposes to transform the world have become our purposes, his wounds have become the source of our healing, and his kingdom is turning our world upside down.
+          Our roots extend, on the one side, through the sacraments, the liturgy, and the accumulated wisdom of God's people. On the other side, our roots also reach out through the heartfelt sense of mission and personal renewal that have energized many through God's Spirit. With such a healthy foundation, this is one strong plant.
+        </Typography>
       </div>
     )
   }
