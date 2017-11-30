@@ -29,7 +29,7 @@ class TitleBar extends React.Component {
         <AppBar color='default'>
           <ToolBar>
             <Typography type='title' className={classes.flex}>
-              Church of Atonement
+              Church of the Atonement
             </Typography>
             <Tabs textColor='accent' value={this.props.currentTab} onChange={this.props.handleChange}>
               <Tab color='accent' value='home' label='Home' />
