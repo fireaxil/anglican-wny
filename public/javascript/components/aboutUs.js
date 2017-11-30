@@ -28,6 +28,12 @@ const styles = theme => ({
       paddingRight: '20%'
     }
   },
+  '@media (min-width: 600px)': {
+    text: {
+      paddingLeft: '20%',
+      paddingRight: '20%'
+    }
+  },
   divider: {
     marginTop: 30,
     width: '68%'
