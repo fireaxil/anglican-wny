@@ -7,9 +7,9 @@ import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   barRoot: {
-    height: 150,
+    height: 100,
     width: '100%',
-    backgroundColor: '#3F51B5',
+    backgroundColor: theme.palette.secondary[500],
     display: 'flex',
     justifyContent: 'center'
   },
