@@ -13,7 +13,8 @@ const styles = theme => ({
   },
   flex: {
     flex: 1,
-    fontWeight: 300
+    color: 'rgba(0, 0, 0, 0.60)',
+    fontWeight: 500
   }
 })
 // make title larger across the titlebar
