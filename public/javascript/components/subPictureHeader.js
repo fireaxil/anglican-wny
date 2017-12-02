@@ -5,13 +5,9 @@ import Typography from 'material-ui/Typography'
 import Divider from 'material-ui/Divider'
 
 const styles = theme => ({
-  root: {
-    textAlign: 'center',
-    marginTop: 20
-  },
-  text: {
-    fontWeight: 300
-  },
+  root: theme.textContent.root,
+  text: theme.textContent.text,
+  centerText: theme.textContent.centerText,
   divider: {
     marginTop: 30,
     width: '85%'
@@ -32,26 +28,22 @@ class SubPictureHeader extends React.Component {
 
   render () {
     const { classes } = this.props
-
     return (
       <div className={classes.root}>
-        <Typography className={classes.text} type='display1'>
+        <Typography className={classes.centerText} type='display1'>
           We form Anglican churches that are <i> both </i> <br />
           evangelical and catholic <br />
           liturgical and missional <br />
         </Typography>
-        <Divider inset className={classes.divider} />
-        <div className={classes.dividerMargin}>
-          <Typography className={classes.text} type='display2'>
-            Service Time
-          </Typography>
-          <br />
-          <Typography className={classes.text} type='body2'>
-            Sundays at 5:00PM followed by a meal, starting December 3rd <br />
-            Location: 1 Symphony Circle
-          </Typography>
-          <Divider inset className={classes.divider} />
-        </div>
+        <Divider className={classes.divider} />
+        <Typography className={classes.centerText} type='display2'>
+          Service Time
+        </Typography>
+        <Typography className={classes.centerText} type='body1'>
+          Sundays at 5:00PM followed by a meal, starting December 3rd <br />
+          Location: 1 Symphony Circle
+        </Typography>
+        <Divider className={classes.divider} />
       </div>
     )
   }

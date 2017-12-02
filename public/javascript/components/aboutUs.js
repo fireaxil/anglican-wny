@@ -7,7 +7,6 @@ import Divider from 'material-ui/Divider'
 const styles = theme => ({
   root: {
     paddingTop: 40,
-    // width: 'calc(100% - 455px)',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
@@ -22,12 +21,6 @@ const styles = theme => ({
     paddingLeft: 24,
     paddingRight: 24
   },
-  // '@media (min-resolution: 200dpi)': {
-  //   text: {
-  //     paddingLeft: '20%',
-  //     paddingRight: '20%'
-  //   }
-  // },
   '@media (min-width: 948px)': {
     text: {
       paddingLeft: '20%',

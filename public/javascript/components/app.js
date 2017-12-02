@@ -43,6 +43,56 @@ const theme = createMuiTheme({
         fontWeight: 400
       }
     }
+  },
+  textContent: {
+    root: {
+      paddingTop: 40,
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      paddingRight: 20,
+      paddingLeft: 20,
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    },
+    '@media (min-width: 948px)': {
+      text: {
+        paddingLeft: '20%',
+        paddingRight: '20%'
+      }
+    },
+    text: {
+      fontWeight: 300,
+      lineHeight: '1.6em',
+      paddingLeft: 24,
+      paddingRight: 24
+    },
+    centerText: {
+      width: '100%',
+      textAlign: 'center',
+      fontWeight: 300,
+      lineHeight: '1.6em'
+    },
+    divider: {
+      marginTop: 30,
+      width: '68%'
+    }
+  },
+  // '@media (min-width: 948px)': {
+  //   text: {
+  //     paddingLeft: '20%',
+  //     paddingRight: '20%'
+  //   }
+  // },
+  // text: {
+  //   fontWeight: 300,
+  //   lineHeight: '1.6em',
+  //   paddingLeft: 24,
+  //   paddingRight: 24
+  // },
+  divider: {
+    marginTop: 30,
+    width: '68%'
   }
 })
 
