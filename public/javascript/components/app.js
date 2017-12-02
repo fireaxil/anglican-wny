@@ -96,6 +96,8 @@ const theme = createMuiTheme({
   }
 })
 
+console.log(theme)
+
 const styles = theme => ({
   paddingBottom: {
     paddingBottom: 100
