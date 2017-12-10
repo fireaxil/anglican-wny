@@ -1,8 +1,10 @@
 const path = require('path')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './public/javascript/index.js',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -21,6 +23,14 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new UglifyJSPlugin({
+      sourceMap: true
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  ],
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',

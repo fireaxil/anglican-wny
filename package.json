@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "standard",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
     "heroku-postbuild": "webpack"
   },
@@ -37,7 +37,8 @@
     "webpack": "^3.6.0",
     "nodemailer": "^4.4.0",
     "aws-sdk": "^2.159.0",
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "uglify-js": "^3.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -47,7 +48,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "standard": "^10.0.3",
-    "webpack": "^3.6.0",
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.1"
   }
 }

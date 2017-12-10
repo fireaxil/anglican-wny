@@ -12,7 +12,7 @@ const styles = theme => ({
     flexGrow: '1',
     width: '100%'
   },
-  '@media (min-width: 600px)': {
+  [theme.breakpoints.up('sm')]: {
     titleText: {
       flex: 1,
       textAlign: 'start !important',
