@@ -40,7 +40,7 @@ class SubPictureHeader extends React.Component {
           Service Time
         </Typography>
         <Typography className={classes.centerText} type='body1'>
-          Sundays at 5:00PM followed by a meal, starting December 3rd <br />
+          Sundays at 5:00PM followed by a meal <br />
           Location: 1 Symphony Circle
         </Typography>
         <Divider className={classes.divider} />

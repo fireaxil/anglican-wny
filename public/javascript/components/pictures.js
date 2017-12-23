@@ -10,7 +10,7 @@ const styles = theme => ({
   picture: {
     width: '100%',
     minHeight: '60vh',
-    backgroundImage: 'url(../../images/vigilfront.png)',
+    // backgroundImage: 'url(' + vigilFront + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   },

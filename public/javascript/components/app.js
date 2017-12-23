@@ -9,6 +9,8 @@ import PropTypes from 'prop-types'
 import AboutUs from './aboutUs'
 import BottomBar from './bottomBar'
 // import 'typeface-roboto'
+import vigilFront from '../../images/vigilfront.png'
+import aboutUs from '../../images/aboutUs.png'
 
 // have to give an array of primary colors
 
@@ -125,14 +127,14 @@ class App extends React.Component {
   render () {
     const { classes } = this.props
     const { currentTab } = this.state
-
+    console.log(vigilFront)
     return (
       <MuiThemeProvider theme={theme}>
         <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
         { currentTab === 'home' &&
           <div className={classes.paddingBottom}>
             <Pictures
-              backgroundImage='url(../../images/vigilfront.png)'
+              backgroundImage={'url(.' + vigilFront + ')'}
               titleText={<div> At one with God. <br /> At one with each other. </div>}
             />
             <SubPictureHeader />
@@ -142,7 +144,7 @@ class App extends React.Component {
           currentTab === 'about' &&
             <div className={classes.paddingBottom}>
               <Pictures
-                backgroundImage='url(../../images/aboutUs.png)'
+                backgroundImage={'url(.' + aboutUs + ')'}
                 titleText={'About Us'}
               />
               <AboutUs />
