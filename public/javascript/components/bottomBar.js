@@ -31,7 +31,7 @@ class BottomBar extends React.Component {
   }
 
   onGiveClick () {
-    window.open('https://www.givingtools.com/atonement', '_blank')
+    window.open('https://givingtools.com/atonement/prod&id=onetime%7B%7DSIIHEUT4UH%7B%7DGive-to-Church-of-the-Atonement.php', '_blank')
   }
 
   onFacebookClick () {

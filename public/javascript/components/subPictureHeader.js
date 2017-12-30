@@ -31,7 +31,7 @@ class SubPictureHeader extends React.Component {
     return (
       <div className={classes.root}>
         <Typography className={classes.centerText} type='display1'>
-          We form Anglican churches that are <i> both </i> <br />
+          An Anglican church for the city of Buffalo: <br />
           evangelical and catholic <br />
           liturgical and missional <br />
         </Typography>
@@ -40,7 +40,7 @@ class SubPictureHeader extends React.Component {
           Service Time
         </Typography>
         <Typography className={classes.centerText} type='body1'>
-          Sundays at 5:00PM followed by a meal <br />
+          Sundays at 5:00PM, followed by a meal <br />
           Location: 1 Symphony Circle
         </Typography>
         <Divider className={classes.divider} />

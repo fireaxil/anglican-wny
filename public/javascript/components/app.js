@@ -9,8 +9,8 @@ import PropTypes from 'prop-types'
 import AboutUs from './aboutUs'
 import BottomBar from './bottomBar'
 // import 'typeface-roboto'
-import vigilFront from '../../images/vigilfront.png'
-import aboutUs from '../../images/aboutUs.png'
+import vigilFront from '../../images/mainNew.jpg'
+import aboutUs from '../../images/aboutUs.jpg'
 
 // have to give an array of primary colors
 
@@ -120,14 +120,13 @@ class App extends React.Component {
     if (currentTab === 'home' || currentTab === 'about') {
       this.setState({currentTab})
     } else if (currentTab === 'nickel') {
-      window.open('https://www.anglicanwny.com/nickel-city-forum/', '_blank')
+      window.open('http://www.nickelcityforum.com/', '_blank')
     }
   }
 
   render () {
     const { classes } = this.props
     const { currentTab } = this.state
-    console.log(vigilFront)
     return (
       <MuiThemeProvider theme={theme}>
         <TitleBar currentTab={this.state.currentTab} handleChange={this.handleChange} />
