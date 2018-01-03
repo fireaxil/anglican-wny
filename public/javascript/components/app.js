@@ -2,7 +2,6 @@ import React from 'react'
 import TitleBar from './titlebar'
 import Pictures from './pictures'
 import SubPictureHeader from './subPictureHeader'
-import blue from 'material-ui/colors/blue'
 import red from 'material-ui/colors/red'
 import { MuiThemeProvider, createMuiTheme, withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
@@ -11,6 +10,7 @@ import BottomBar from './bottomBar'
 // import 'typeface-roboto'
 import vigilFront from '../../images/mainNew.jpg'
 import aboutUs from '../../images/aboutUs.jpg'
+import NickelCityForum from './nickelCityForum'
 
 // have to give an array of primary colors
 
@@ -46,6 +46,9 @@ const theme = createMuiTheme({
       }
     }
   },
+  'a': {
+    textDecoration: 'none'
+  },
   textContent: {
     root: {
       paddingTop: 40,
@@ -67,7 +70,8 @@ const theme = createMuiTheme({
       fontWeight: 300,
       lineHeight: '1.6em',
       paddingLeft: 24,
-      paddingRight: 24
+      paddingRight: 24,
+      textAlign: 'center'
     },
     centerText: {
       width: '100%',
@@ -117,11 +121,7 @@ class App extends React.Component {
   }
 
   handleChange (event, currentTab) {
-    if (currentTab === 'home' || currentTab === 'about') {
-      this.setState({currentTab})
-    } else if (currentTab === 'nickel') {
-      window.open('http://www.nickelcityforum.com/', '_blank')
-    }
+    this.setState({currentTab})
   }
 
   render () {
@@ -147,6 +147,12 @@ class App extends React.Component {
                 titleText={'About Us'}
               />
               <AboutUs />
+            </div>
+        }
+        {
+          currentTab === 'nickel' &&
+            <div className={classes.paddingBottom}>
+              <NickelCityForum />
             </div>
         }
         <BottomBar onAboutClick={this.handleChange} />

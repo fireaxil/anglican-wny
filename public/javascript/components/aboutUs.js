@@ -122,8 +122,41 @@ class AboutUs extends React.Component {
           What We Seek
         </Typography>
         <Typography className={classes.text} type='body1'>
-          We are building a community around Jesus Christ. We are nourished by his Spirit and the sacraments of his church. His purposes to transform the world have become our purposes, his wounds have become the source of our healing, and his kingdom is turning our world upside down.
-          Our roots extend, on the one side, through the sacraments, the liturgy, and the accumulated wisdom of God's people. On the other side, our roots also reach out through the heartfelt sense of mission and personal renewal that have energized many through God's Spirit. With such a healthy foundation, this is one strong plant.
+          <div className={classes.paragraphs}>
+            We are building a community around Jesus Christ. We are nourished by his Spirit and the
+            sacraments of his church. His purposes to transform the world have become our purposes,
+            his wounds have become the source of our healing, and his kingdom is turning our world
+            upside down.
+          </div>
+          <div className={classes.paragraphs}>
+            Our roots extend, on the one side, through the sacraments,
+            the liturgy, and the accumulated wisdom of God's people.
+            On the other side, our roots also reach out through the heartfelt
+            sense of mission and personal renewal that have energized many through God's Spirit.
+            With such a healthy foundation, this is one strong plant.
+          </div>
+          <div className={classes.paragraphs}>
+            The West Side is a melting pot of Burmese refugees, Puerto Ricans, old Italian-Americans,
+            black families, young hipsters - anything you might conceivably call <i>human</i>.
+          </div>
+          <div className={classes.paragraphs}>
+            But what will this community be without a strong spiritual foundation?
+            Strangers who live close to one another? Instead, let us be drawn together
+            by the love of Jesus Christ, and feel that magnetism running through our streets and
+            parks, at soccer practices and pubs. The resurrection of Jesus is the beginning of a
+            new world now. So we are rearranging our lives to center on this one thing: Hope.
+          </div>
+          <div className={classes.paragraphs}>
+            <i>
+            “Hope is what you get when you suddenly realize that a different worldview is possible,
+            a worldview in which the rich, the powerful, and the unscrupulous do not after all have
+            the last word. The same worldview shift that is demanded by the resurrection of Jesus is
+            the shift that will enable us to transform the world.”
+            </i>
+            <br />
+            — N.T. Wright, Surprised by Hope
+
+          </div>
         </Typography>
       </div>
     )
