@@ -133,7 +133,7 @@ class App extends React.Component {
         { currentTab === 'home' &&
           <div className={classes.paddingBottom}>
             <Pictures
-              backgroundImage={'url(.' + vigilFront + ')'}
+              backgroundImage={'url(./dist/' + vigilFront + ')'}
               titleText={<div> At one with God. <br /> At one with each other. </div>}
             />
             <SubPictureHeader />
@@ -143,7 +143,7 @@ class App extends React.Component {
           currentTab === 'about' &&
             <div className={classes.paddingBottom}>
               <Pictures
-                backgroundImage={'url(.' + aboutUs + ')'}
+                backgroundImage={'url(./dist/' + aboutUs + ')'}
                 titleText={'About Us'}
               />
               <AboutUs />

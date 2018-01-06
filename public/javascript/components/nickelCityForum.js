@@ -18,7 +18,7 @@ class NickelCityForum extends React.Component {
     return (
       <div>
         <Pictures
-          backgroundImage={'url(.' + nickelCityForumPicture + ')'}
+          backgroundImage={'url(./dist/' + nickelCityForumPicture + ')'}
           titleText={'Nickel City Forum'}
         />
         <NickelCityForumText />
